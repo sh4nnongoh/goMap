@@ -14,6 +14,8 @@
 </body>
 <script>
 
+	// Edit below to add more devices (each device should have a unique icon color)
+
 	var greenIcon = new L.Icon({
 		iconUrl: 'lib/leaflet/images/marker-icon-green.png',
 		shadowUrl: 'lib/leaflet/images/marker-shadow.png',
@@ -31,7 +33,13 @@
 		shadowSize: [41, 41]
 	});
 
-	//var map = L.map('mapdiv').setView([1.4375562,103.8278022], 18);
+	var assets = {}
+	assets["A"] = new assetObj("A","green",greenIcon);
+	assets["B"] = new assetObj("B","red",redIcon);
+
+	/////////////////////////////////////////////////////////////////
+
+	// Edit this to set the starting map view
 	var map = L.map('mapdiv').setView([1.2796562,103.8164022], 17);
 
 	var basemap = L.tileLayer('https://maps-{s}.onemap.sg/v3/Default/{z}/{x}/{y}.png', {
@@ -45,10 +53,6 @@
 	basemap.addTo(map);
 
 	var pathLayer = L.layerGroup().addTo(map);
-
-	var assets = {}
-	assets["A"] = new assetObj("A","green",greenIcon);
-	assets["B"] = new assetObj("B","red",redIcon);
 
 	function icon(iconUrl, shadowUrl, iconSize, iconAnchor, popupAnchor, shadowSize){
 		return new L.Icon({
