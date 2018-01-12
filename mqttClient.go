@@ -46,8 +46,8 @@ func startMqttClient() {
 	topic := flag.String("topic", "test", "Topic to subscribe to")
 	qos := flag.Int("qos", 0, "The QoS to subscribe to messages at")
 	clientid := flag.String("clientid", hostname+strconv.Itoa(time.Now().Second()), "A clientid for the connection")
-	username := flag.String("username", "mapApp", "A username to authenticate to the MQTT server")
-	password := flag.String("password", "P@ssw0rd", "Password to match username")
+	username := flag.String("username", "guest", "A username to authenticate to the MQTT server")
+	password := flag.String("password", "guest", "Password to match username")
 	flag.Parse()
 
 	connOpts := MQTT.NewClientOptions().AddBroker(*server).SetClientID(*clientid).SetCleanSession(true)
