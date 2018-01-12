@@ -21,3 +21,10 @@ https://www.rabbitmq.com/management.html
 #### Open `PlotGPS.html` with Chrome
 #### Msg Payload Format: `<Device_ID>,<Latitude>,<Longitude>`; Use any MQTT client to test the Map App.
 
+### Details:
+The underlying code is based on: https://github.com/markvincze/golang-reload-browser
+The Map is based on OneMap: https://github.com/markvincze/golang-reload-browser
+
+### TODO:
+Create a Web Server to host the mapApp.
+Ensure communications between components are secure; ie. TLS.
