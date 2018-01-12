@@ -17,7 +17,7 @@ https://www.rabbitmq.com/management.html
 
 ### Quickstart:
 #### Open Powershell and run `./build.ps1`
-#### Execute `goMapp.exe` and verify it connects to RabbitMQ (refer to Management Console)
+#### Execute `goMap.exe` and verify it connects to RabbitMQ (refer to Management Console)
 #### Open `PlotGPS.html` with Chrome
 #### Msg Payload Format: `<Device_ID>,<Latitude>,<Longitude>`; Use any MQTT client to test the Map App.
 
